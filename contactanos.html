@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Gary Barahona Varela" />
+    <meta name="keywords" class="Salud, Deporte, Vida, Ejercicio" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+
+
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script  src="js/contactanos.js" ></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2H9KPnhTforfTdrDIN-qOpzx8hRXIIFE&callback=initMap&language=es"> /*llama al mapa y con callback llama a la funcion initmap*/
+</script>
+    <script src="https://kit.fontawesome.com/c385d1be1c.js" crossorigin="anonymous"></script>
+    <script defer src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+    <title>BE FIT</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="logo">
+        <img src="img/logo1.png" alt="Logo" title="Logo" id="logo">
+    </div>  
+    <ul class="listaNav listaNav-media">
+      <li><a href="index.html" target="_self">Inicio</a></li>
+      <li class="sub-menu"><a href="contenido.html" target="_self">Contenido</a></li>
+      <li class="sub-menu"><a href="">acerca de</a>
+        <div class="sub-menu-sobreNosotros">
+          <ul>
+          <li><a href="acercaNosotros.html" target="_self">BE FIT</a></li>
+          <li><a href="autor.html">autor</a></li>
+     
+        </ul>
+        </div></li>
+      <li><a href="contactanos.html">Contáctanos</a></li>    
+  </ul>
+<button class="nav-boton">
+  <i class="fas fa-bars" onclick="changeNav()"></i>
+</button>
+    </nav>     
+    </header>
+    <main class="main main-contactanos">
+      <div class="contenedor-titulo">
+      <h2>Contáctanos</h2>
+    </div>
+        <section class="infoContacto">
+          <h3>Información de contacto</h3>
+        </div>
+        <p>Correo electrónico: garybarahona85@gmail.com</p>
+        <p>Número telefónico: (+506) 6114-6070</p>
+    </section>
+    <section class="direccion">
+          <h3>Dirección</h3>
+          <div id="map"></div>    
+        <!--  <script 
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2H9KPnhTforfTdrDIN-qOpzx8hRXIIFE">
+      </script>-->
+      </section>
+
+      <form  class="formulario">
+          <h3>Vía formulario</h3>
+        <div class="inputTexto">
+            <input class="input" type="text" id="nombre" placeholder="Nombre" />
+            <p id="texto-nombre"></p>
+            <input type="text" id="apellido" placeholder="Apellido(s)" />
+            <p id="texto-apellido"></p>
+            <input type="email" id="correo" placeholder="Correo" />
+            <p id="texto-email"></p>
+        </div>
+
+        <span class="fecha">
+          <label for="fecha"> Fecha de nacimiento</label>
+          <input type="date" id="fecha" min="1910-01-01" max="2022-01-01" />
+        </span>
+        <p id="texto-fecha">error</p>
+
+
+          <select  id="genero">
+            <option disabled selected>Genero</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            </select>
+
+
+            <p id="texto-genero">error</p>
+          <span id=contenedor-gradoAcademico>
+          <p id="titulo-gradoAcademico">Grado academico</p>
+        <select multiple id="gradoAcademico">
+          <option value="primaria">Primaria</option>
+          <option value="secundaria">Secundaria</option>
+          <option value="preparatoria">Preparatoria</option>
+          <option value="universidad">Universidad</option>
+        </select>
+      </span>
+
+          <textarea name="detalle" id="detalle" cols="45" rows="10" placeholder="Detalle" ></textarea>
+          <p id="texto-detalle">error</p>
+
+        <button type="button" onclick="validar()"  class="btn btn-warning boton-formulario">Enviar</button>
+
+    </form>
+    </main>
+    <footer class="footer">
+      <div class="redesSociales">
+          <p>Redes sociales</p>
+           <ul class="listaIconos">
+<li><a href="https://www.facebook.com" target="_blank"><img src="img/facebook_icon-icons.com_75091 (1).png" alt="facebook" title="Facebook"></a></li>
+<li><a href="https://www.instagram.com" target="_blank"><img src="img/instagram_icon-icons.com_75093 (1).png" alt="instagram" title="Instagram"></a></li>
+<li><a href="https://www.youtube.com" target="_blank"><img src="img/youtube_icon-icons.com_75094 (1).png" alt="youtube" title="Youtube"></a></li>
+<li><a href="https://www.twitter.com" target="_blank"> <img src="img/twitter_icon-icons.com_75092 (1).png" alt="twitter" title="Twitter"></a></li>
+            </ul>        
+          </div>      
+          <div class="derechosReservados">
+            <p>Made in Alajuela (Costa Rica) · © 2021-2021 BE FIT Inc. · Todos los derechos reservados.</p>
+        </div>   
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contenido.html">Contenido</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+            <li><a href="autor.html">Autor</a></li>
+            <li><a href="acercaNosotros.html">BE FIT</a></li>
+          </ul>
+        </div>
+</footer>
+  </body>
+</html>
